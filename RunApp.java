@@ -14,10 +14,13 @@ import br.com.gt.beans.Veiculo;
 
 class RunApp {
     public static void main(String[] args) {
-        System.out.println("\n" + "Testando a Aplicação");
+        System.out.println("\n" + "Testando a Aplicação com Listas");
+        
+        ArrayList<Cidade> listaDeCidade = new ArrayList<>(null);
+        listaDeCidade.add(0, new Cidade(1, "São Paulo", "São Paulo", "Brasil", "SP", "BR"));
+        listaDeCidade.add(1, new Cidade(1, "Rio De Janeiro", "Rio De Janeiro", "Brasil", "SP", "BR"));
 
-        Cidade cidade = new Cidade(1, "São Paulo", "São Paulo", "Brasil", "SP", "BR");
-        Endereco endereco = new Endereco(1, "Jardim De Algum Lugar", "08532-950", "", "7", cidade);
+        Endereco endereco = new Endereco(1, "Jardim De Algum Lugar", "08532-950", "", "7", null);
         Agencia agencia = new Agencia(1, endereco);
 
         Locadora locadora = new Locadora(1, "Locadora GT", "gtlocadora@gmail.com", "74.521.092/14", "(11) 94321-9832",
